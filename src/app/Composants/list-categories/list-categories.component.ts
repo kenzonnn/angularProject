@@ -45,9 +45,9 @@ export class ListCategoriesComponent {
     alert(description);
   }
 
-
   goToDetails(id: number) {
-    this.router.navigate([`/products/${id}`]);
+    //this.router.navigate([`/products/${id}`]);
+    this.router.navigate([`products` , id]);
   }
 
 

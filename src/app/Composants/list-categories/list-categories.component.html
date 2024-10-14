@@ -9,11 +9,12 @@
 
       <h3 appHighlighDirective >{{ cat.title | uppercase }}</h3>
 
-      <button class="btn btn-primary" *ngIf="cat.available; else alt" (click)="goToDetails(cat.id)">
+      <!--<button class="btn btn-primary" *ngIf="cat.available; else alt" (click)="goToDetails(cat.id)" >-->
+        <button class="btn btn-primary" *ngIf="cat.available; else alt" [routerLink]="['/products',cat.id]">
         Voir produits
       </button>
-      
-      
+      <a [routerLink]="['detailCategory' ,cat.id]"> more details </a>
+      <router-outlet></router-outlet>
       <ng-template #alt>
         <p style="color: red;">Categorie non disponible</p>
       </ng-template>

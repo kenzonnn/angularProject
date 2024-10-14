@@ -13,6 +13,7 @@ import { SearchPipe } from './search.pipe';
 import { HighlighDirectiveDirective } from './highligh-directive.directive';
 import { NotFoundPageComponentComponent } from './not-found-page-component/not-found-page-component.component';
 import { ProductCategoryComponent } from './product-category/product-category.component';
+import { DetailCategoryComponent } from './detail-category/detail-category.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ProductCategoryComponent } from './product-category/product-category.co
     SearchPipe,
     HighlighDirectiveDirective,
     NotFoundPageComponentComponent,
-    ProductCategoryComponent
+    ProductCategoryComponent,
+    DetailCategoryComponent
   ],
   imports: [
     BrowserModule,

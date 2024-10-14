@@ -10,7 +10,7 @@ import { AproposComponent } from './apropos/apropos.component';
     AproposComponent
   ],
   imports: [
-    CommonModule,
+    CommonModule, // pour importer l hajet li par defaut aand angular lkol , directives , l pipe ..
     AproposRoutingModule
   ]
 })

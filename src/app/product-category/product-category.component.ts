@@ -9,7 +9,7 @@ import { Product } from '../models/product';
 })
 export class ProductCategoryComponent implements OnInit {
 
-  categoryId!: number;
+  categoryId!: Number;
   filteredProducts: Product[] = [];
 
   listProducts: Product[] = [
@@ -21,13 +21,13 @@ export class ProductCategoryComponent implements OnInit {
     { "id": 6, "name": "TV 50'' LG", "image": "assets/images/tv_lg.jpg", "categoryId": 5, "description": "", "price": 1800, "brand": "LG", "promotion": 0 },
   ];
 
-  constructor(private route: ActivatedRoute) {
+  constructor(private route: ActivatedRoute) { }
+  // activatedroute pour recuperer les param a partor de query param
+  // snapshot : capture l'url une seul fois des que je lance le composant 
+  // parammap : traja3 observale => elle garanti le changement en cas de changement de variable , elle point esu rle case memoir du param en question
 
-  }
   ngOnInit(): void {
-    this.categoryId = Number(this.route.snapshot.paramMap.get('id'));
-
+    this.route.paramMap.subscribe(params => { this.categoryId = Number(params.get('id'));});
     this.filteredProducts = this.listProducts.filter(p => p.categoryId === this.categoryId);
   }
-
 }
