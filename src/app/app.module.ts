@@ -11,6 +11,8 @@ import { HomeComponent } from './Composants/home/home.component';
 import { FormsModule } from '@angular/forms';
 import { SearchPipe } from './search.pipe';
 import { HighlighDirectiveDirective } from './highligh-directive.directive';
+import { NotFoundPageComponentComponent } from './not-found-page-component/not-found-page-component.component';
+import { ProductCategoryComponent } from './product-category/product-category.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { HighlighDirectiveDirective } from './highligh-directive.directive';
     ListCategoriesComponent,
     HomeComponent,
     SearchPipe,
-    HighlighDirectiveDirective
+    HighlighDirectiveDirective,
+    NotFoundPageComponentComponent,
+    ProductCategoryComponent
   ],
   imports: [
     BrowserModule,

@@ -14,4 +14,5 @@ import { ProductsComponent } from './products/products.component';
     ProductRoutingModule
   ]
 })
-export class ProductModule { }
+export class ProductModule { 
+}

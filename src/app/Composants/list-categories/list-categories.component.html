@@ -9,8 +9,11 @@
 
       <h3 appHighlighDirective >{{ cat.title | uppercase }}</h3>
 
-      <button class="btn btn-primary" *ngIf="cat.available; else alt">Voir produits</button>
-
+      <button class="btn btn-primary" *ngIf="cat.available; else alt" (click)="goToDetails(cat.id)">
+        Voir produits
+      </button>
+      
+      
       <ng-template #alt>
         <p style="color: red;">Categorie non disponible</p>
       </ng-template>
