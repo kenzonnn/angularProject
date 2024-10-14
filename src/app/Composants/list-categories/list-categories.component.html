@@ -1,9 +1,19 @@
 <div class="container">
+  <span>Search: </span><input type="text" [(ngModel)]="titre">
   <div class="row">
-    <div *ngFor="let cat of categories" class="col-md-4" style="margin-bottom: 20px;">
-      <img [src]="cat.image" alt="Produits voitures" class="img-fluid h-
-    50 w-75">
-      <h3>P{{cat.title| uppercase}}</h3>
+    <div *ngFor="let cat of categories | search:titre  " class="col-md-4" style="margin-bottom: 20px;">
+      <!--<div *ngIf="cat.title == titre || !titre">-->
+
+      <img [src]="cat.image" alt="Produits voitures" class="img-fluid h-50 w-75"
+        (click)="showDescription(cat.description)">
+
+      <h3 appHighlighDirective >{{ cat.title | uppercase }}</h3>
+
+      <button class="btn btn-primary" *ngIf="cat.available; else alt">Voir produits</button>
+
+      <ng-template #alt>
+        <p style="color: red;">Categorie non disponible</p>
+      </ng-template>
     </div>
   </div>
 </div>

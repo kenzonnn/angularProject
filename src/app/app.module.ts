@@ -8,6 +8,9 @@ import { MainComponent } from './main/main.component';
 import { FooterComponent } from './Composants/footer/footer.component';
 import { ListCategoriesComponent } from './Composants/list-categories/list-categories.component';
 import { HomeComponent } from './Composants/home/home.component';
+import { FormsModule } from '@angular/forms';
+import { SearchPipe } from './search.pipe';
+import { HighlighDirectiveDirective } from './highligh-directive.directive';
 
 @NgModule({
   declarations: [
@@ -16,11 +19,14 @@ import { HomeComponent } from './Composants/home/home.component';
     MainComponent,
     FooterComponent,
     ListCategoriesComponent,
-    HomeComponent
+    HomeComponent,
+    SearchPipe,
+    HighlighDirectiveDirective
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
